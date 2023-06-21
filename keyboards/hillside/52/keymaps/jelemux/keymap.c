@@ -29,11 +29,11 @@ enum layers {
 #define OSM_LCT OSM(MOD_LCTL)
 #define OSM_RCT OSM(MOD_RCTL)
 
-#define UNDO LCTL(KC_Z)
+#define UNDO LCTL(KC_Y)
 #define CUT  LCTL(KC_X)
 #define COPY LCTL(KC_C)
 #define PASTE LCTL(KC_V)
-#define REDO LCTL(KC_Y)
+#define REDO LCTL(KC_Z)
 // (For OS X, you'll want to change these editing keys to LGUI(KC_Z) etc.)
 
 
@@ -48,8 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_MEDIA] = LAYOUT(
      KC_VOLU, KC_1   , KC_2   , KC_3   , KC_4   , KC_5   ,                                        KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_HOME,
      KC_VOLD, KC_F11 , KC_F12 , KC_MPLY, KC_MSTP, KC_MPRV,                                        KC_MNXT, KC_LEFT, KC_UP  , KC_DOWN, KC_RGHT, KC_END,
-     KC_TRNS, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , UNDO   ,                      REDO   , KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_TRNS,
-     KC_TRNS, LY_BASE, KC_TRNS,          KC_MUTE, CUT    , COPY   , KC_TRNS,    KC_TRNS, PASTE  , KC_PGUP, KC_PGDN,          XXXXXXX, KC_TRNS, KC_TRNS
+     _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , UNDO   ,                      REDO   , KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , _______,
+     _______, LY_BASE, _______,          KC_MUTE, CUT    , COPY   , _______,    _______, PASTE  , KC_PGUP, KC_PGDN,          XXXXXXX, _______, _______
     ),
     [_GAMING] = LAYOUT(
      KC_GRV,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
